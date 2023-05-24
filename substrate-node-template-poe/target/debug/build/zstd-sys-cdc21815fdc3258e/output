@@ -1,0 +1,200 @@
+cargo:rerun-if-env-changed=ZSTD_SYS_USE_PKG_CONFIG
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-pc-windows-msvc")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+DEBUG = Some("true")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-msvc
+CC_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_msvc
+CC_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-msvc
+CFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_msvc
+CFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\debug.o" "-c" "zstd/lib/common\\debug.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+debug.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\entropy_common.o" "-c" "zstd/lib/common\\entropy_common.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+entropy_common.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\error_private.o" "-c" "zstd/lib/common\\error_private.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+error_private.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\fse_decompress.o" "-c" "zstd/lib/common\\fse_decompress.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+fse_decompress.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\pool.o" "-c" "zstd/lib/common\\pool.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+pool.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\threading.o" "-c" "zstd/lib/common\\threading.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+threading.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\zstd_common.o" "-c" "zstd/lib/common\\zstd_common.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_common.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\fse_compress.o" "-c" "zstd/lib/compress\\fse_compress.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+fse_compress.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\hist.o" "-c" "zstd/lib/compress\\hist.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+hist.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\huf_compress.o" "-c" "zstd/lib/compress\\huf_compress.c"
+exit code: 0
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+huf_compress.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress.o" "-c" "zstd/lib/compress\\zstd_compress.c"
+exit code: 0
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_compress.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_literals.o" "-c" "zstd/lib/compress\\zstd_compress_literals.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_compress_literals.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_sequences.o" "-c" "zstd/lib/compress\\zstd_compress_sequences.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_superblock.o" "-c" "zstd/lib/compress\\zstd_compress_superblock.c"
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_double_fast.o" "-c" "zstd/lib/compress\\zstd_double_fast.c"
+zstd_compress_sequences.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_fast.o" "-c" "zstd/lib/compress\\zstd_fast.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_fast.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_lazy.o" "-c" "zstd/lib/compress\\zstd_lazy.c"
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_ldm.o" "-c" "zstd/lib/compress\\zstd_ldm.c"
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_opt.o" "-c" "zstd/lib/compress\\zstd_opt.c"
+zstd_compress_superblock.c
+zstd_double_fast.c
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_ldm.c
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_lazy.c
+zstd_opt.c
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstdmt_compress.o" "-c" "zstd/lib/compress\\zstdmt_compress.c"
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\huf_decompress.o" "-c" "zstd/lib/decompress\\huf_decompress.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_ddict.o" "-c" "zstd/lib/decompress\\zstd_ddict.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstdmt_compress.c
+huf_decompress.c
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_decompress.o" "-c" "zstd/lib/decompress\\zstd_decompress.c"
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+exit code: 0
+exit code: 0
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-I" "zstd/lib/" "-I" "zstd/lib/common" "-fvisibility=hidden" "-DZSTD_DISABLE_ASM=" "-DZSTD_LIB_DEPRECATED=0" "-DXXH_PRIVATE_API=" "-DZSTDLIB_VISIBILITY=" "-DZSTDERRORLIB_VISIBILITY=" "-FoC:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_decompress_block.o" "-c" "zstd/lib/decompress\\zstd_decompress_block.c"
+zstd_ddict.c
+exit code: 0
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+cargo:warning=cl: ÃüÁîÐÐ warning D9002 :ºöÂÔÎ´ÖªÑ¡Ïî¡°-fvisibility=hidden¡±
+zstd_decompress.c
+zstd_decompress_block.c
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
+AR_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_msvc
+AR_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-msvc
+ARFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_msvc
+ARFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\lib.exe" "-out:C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\libzstd.a" "-nologo" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\debug.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\entropy_common.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\error_private.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\fse_decompress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\pool.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\threading.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/common\\zstd_common.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\fse_compress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\hist.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\huf_compress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_literals.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_sequences.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_compress_superblock.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_double_fast.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_fast.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_lazy.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_ldm.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstd_opt.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/compress\\zstdmt_compress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\huf_decompress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_ddict.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_decompress.o" "C:\\Users\\Heart\\Desktop\\æ–°å»ºæ–‡ä»¶å¤¹\\Substrate\\Substrate\\substrate-node-template-poe\\target\\debug\\build\\zstd-sys-cdc21815fdc3258e\\out\\zstd/lib/decompress\\zstd_decompress_block.o"
+exit code: 0
+cargo:rustc-link-search=native=D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\atlmfc\lib\x64
+cargo:rustc-link-lib=static=zstd
+cargo:rustc-link-search=native=C:\Users\Heart\Desktop\æ–°å»ºæ–‡ä»¶å¤¹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\zstd-sys-cdc21815fdc3258e\out
+cargo:root=C:\Users\Heart\Desktop\æ–°å»ºæ–‡ä»¶å¤¹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\zstd-sys-cdc21815fdc3258e\out
+cargo:include=D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\zstd-sys-2.0.7+zstd.1.5.4\zstd/lib
