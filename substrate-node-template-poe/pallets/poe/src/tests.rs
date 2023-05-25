@@ -113,16 +113,17 @@ fn transfer_claim_failed_when_claim_is_not_exist() { // 转移存证,但存证�
 }
 
 #[test]
-fn transfer_claim_to_oneself() { // 转移存证,但存证不存在
+fn transfer_claim_to_oneself() { // 转移存证给自己
 	  new_test_ext().execute_with(|| {
 		let claim = BoundedVec::try_from(vec![0, 1]).unwrap(); 
 
-		assert_noop!(
-			PoeModule::transfer_claim(RuntimeOrigin::signed(1), claim.clone(), 1),
-			Error::<Test>::ClaimNotExist
-		);
+		let _ = PoeModule::create_claim(RuntimeOrigin::signed(1), claim.clone());
+
+		assert_ok!(PoeModule::transfer_claim(RuntimeOrigin::signed(1), claim.clone(), 1));
 	
-		
-		
+		assert_eq!(
+			Proofs::<Test>::get(&claim),
+			Some((1, frame_system::Pallet::<Test>::block_number()))
+		); // 断言链上状态，两个值相等
 	})
 }
