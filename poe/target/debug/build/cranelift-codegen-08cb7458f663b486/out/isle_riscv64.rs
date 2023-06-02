@@ -5,7 +5,7 @@
 // - src\prelude_lower.isle
 // - src\isa\riscv64\inst.isle
 // - src\isa\riscv64\lower.isle
-// - C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\cranelift-codegen-08cb7458f663b486\out\clif_lower.isle
+// - C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\build\cranelift-codegen-08cb7458f663b486\out\clif_lower.isle
 
 use super::*; // Pulls in all external types.
 use std::marker::PhantomData;

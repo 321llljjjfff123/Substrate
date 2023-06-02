@@ -22,4 +22,4 @@ cargo:rerun-if-changed=src\prelude.isle
 cargo:rerun-if-changed=src\prelude_lower.isle
 cargo:rerun-if-changed=src\isa\riscv64\inst.isle
 cargo:rerun-if-changed=src\isa\riscv64\lower.isle
-cargo:rustc-env=ISLE_DIR=C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\cranelift-codegen-08cb7458f663b486\out
+cargo:rustc-env=ISLE_DIR=C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\build\cranelift-codegen-08cb7458f663b486\out
