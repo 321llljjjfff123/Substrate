@@ -1,8 +1,0 @@
-C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\deps\derive_syn_parse-7b5129e827db2c73.dll: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\error_macros.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\fields.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\variants.rs
-
-C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\deps\derive_syn_parse-7b5129e827db2c73.d: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\error_macros.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\fields.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\variants.rs
-
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\lib.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\error_macros.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\fields.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\derive-syn-parse-0.1.5\src\variants.rs:

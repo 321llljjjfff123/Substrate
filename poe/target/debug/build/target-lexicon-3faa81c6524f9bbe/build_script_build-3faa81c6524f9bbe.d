@@ -1,8 +1,0 @@
-C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\target-lexicon-3faa81c6524f9bbe\build_script_build-3faa81c6524f9bbe.exe: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\build.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/data_model.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/triple.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/targets.rs
-
-C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\target-lexicon-3faa81c6524f9bbe\build_script_build-3faa81c6524f9bbe.d: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\build.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/data_model.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/triple.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/targets.rs
-
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\build.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/data_model.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/triple.rs:
-D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\target-lexicon-0.12.6\src/targets.rs:

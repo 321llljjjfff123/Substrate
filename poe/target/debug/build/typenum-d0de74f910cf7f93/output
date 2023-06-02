@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\typenum-d0de74f910cf7f93\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\Heart\Desktop\新建文件夹\Substrate\Substrate\substrate-node-template-poe\target\debug\build\typenum-d0de74f910cf7f93\out\op.rs
