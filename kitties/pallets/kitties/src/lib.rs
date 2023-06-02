@@ -9,8 +9,6 @@ mod mock; // 基本的测试环境
 #[cfg(test)]
 mod tests; // 测试用例
 
-#[cfg(feature = "runtime-benchmarks")]
-mod benchmarking;
 
 #[frame_support::pallet]
 pub mod pallet {
@@ -82,12 +80,12 @@ pub mod pallet {
 
 			// 得到id时，调用方法进行更新
 			let kitty_id = Self::get_next_id()?;
-			let kitty = Kitty(Self::random_value(&who)); // 调用方法，获取随机值
+			let kitty = Kitty(Self::random_value(&who)); // 调用方法，获取kitty的值（随机值）
 
 			Kitties::<T>::insert(kitty_id, &kitty);
 			KittyOwner::<T>::insert(kitty_id, &who);
 
-			Self::deposit_event(Event::KittyCreated { who, kitty_id, kitty });
+			Self::deposit_event(Event::KittyCreated { who, kitty_id, kitty }); // 发送KittyCreated事件
 			// Return a successful DispatchResultWithPostInfo
 			Ok(())
 		}
@@ -121,9 +119,9 @@ pub mod pallet {
 			// 链上数据的update
 			Kitties::<T>::insert(kitty_id, &kitty); // 存储kitty
 			KittyOwner::<T>::insert(kitty_id, &who); // owner的信息
-			KittyParents::<T>::insert(kitty_id, (kitty_id_1, kitty_id_2)); //parent的信息
+			KittyParents::<T>::insert(kitty_id, (kitty_id_1, kitty_id_2)); // parent的信息
 
-			Self::deposit_event(Event::KittyBreed{ who, kitty_id, kitty});
+			Self::deposit_event(Event::KittyBreed{ who, kitty_id, kitty}); // 发送给KittyBreed事件
 			Ok(())
 
 		} 
@@ -134,13 +132,13 @@ pub mod pallet {
 		#[pallet::weight(10_000 + T::DbWeight::get().writes(1).ref_time())]
 		pub fn transfer(origin: OriginFor<T>, kitty_id: u32, recipient: T::AccountId) -> DispatchResult {
 			let who = ensure_signed(origin)?;
-			ensure!(KittyOwner::<T>::contains_key(kitty_id), Error::<T>::InvalidKittyId);
+			ensure!(KittyOwner::<T>::contains_key(kitty_id), Error::<T>::InvalidKittyId); // 判断有没有这个id
 
 			let owner = Self::kitty_owner(kitty_id).ok_or(Error::<T>::InvalidKittyId)?;
-			ensure!(owner == who, Error::<T>::NotOwner);
+			ensure!(owner == who, Error::<T>::NotOwner); // 判断是不是拥有者
 
-			KittyOwner::<T>::insert(kitty_id, &recipient);
-			Self::deposit_event(Event::KittyTransferred {who, recipient, kitty_id});
+			KittyOwner::<T>::insert(kitty_id, &recipient); // 重新插入
+			Self::deposit_event(Event::KittyTransferred {who, recipient, kitty_id}); // 发送KittyTransferred事件
 			Ok(())
 		}
 
@@ -150,12 +148,12 @@ pub mod pallet {
 		pub fn get_next_id() -> Result<KittyId, DispatchError> {
 			NextKittyId::<T>::try_mutate(|next_id| -> Result<KittyId, DispatchError> {
 				let current_id = *next_id;
-				*next_id = next_id.checked_add(1).ok_or::<DispatchError>(Error::<T>::InvalidKittyId.into())?;
+				*next_id = next_id.checked_add(1).ok_or::<DispatchError>(Error::<T>::InvalidKittyId.into())?; // 自增
 				Ok(current_id)
 			})
 		}
 
-		pub fn random_value(sender: &T::AccountId) -> [u8; 16] {
+		pub fn random_value(sender: &T::AccountId) -> [u8; 16] { // 随机数方法
 			let payload = (
 				T::Randomness::random_seed(),
 				&sender,
