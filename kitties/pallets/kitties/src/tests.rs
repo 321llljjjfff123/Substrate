@@ -85,7 +85,7 @@ fn it_works_for_breed_or_evnet() { // 随机数测试
 		); // 产生child Kitty的测试
 
 	
-	// 产生child kitty的测试
+	// 产生child kitty的event的测试
 	let kitty_1 = KittiesModule::kitties(kitty_id).unwrap();
 	let kitty_2 = KittiesModule::kitties(kitty_id + 1).unwrap();
 	let selector = KittiesModule::random_value(&account_id);
@@ -96,8 +96,12 @@ fn it_works_for_breed_or_evnet() { // 随机数测试
 				// 使新的Kitty的数据来源于它的parent
 				data[i] = (kitty_1.0[i] & selector[i]) | (kitty_2.0[i] & !selector[i]);
 			}
-	System::assert_has_event(Event::KittyBreed { who: account_id, kitty_id: kitty_id + 2, kitty: crate::Kitty(data) }.into()); // 可以按照pallet中的算法，获取随机数
-	System::assert_last_event(Event::KittyBreed { who: account_id, kitty_id: kitty_id + 2, kitty: kitty_1 }.into()); // 也可以直接获取随机数
+	// 测试KittyBreed事件
+	// 可以按照pallet中的算法，获取随机数
+	System::assert_has_event(Event::KittyBreed { who: account_id, kitty_id: kitty_id + 2, kitty: crate::Kitty(data) }.into()); 
+	// 测试last的事件
+	// 也可以直接获取随机数
+	System::assert_last_event(Event::KittyBreed { who: account_id, kitty_id: kitty_id + 2, kitty: kitty_1 }.into());
 
 
 		let breed_kitty_id = 2;
@@ -161,6 +165,7 @@ fn it_works_for_transfer_or_evnet() { // transfer测试
 
 		// transfer的event测试
 		System::assert_has_event(Event::KittyTransferred { who: recipient, recipient: account_id, kitty_id: kitty_id }.into());
+		// 测试last的事件
 		System::assert_last_event(Event::KittyTransferred { who: recipient, recipient: account_id, kitty_id: kitty_id }.into());
 
 
