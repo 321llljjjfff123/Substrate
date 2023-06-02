@@ -1,6 +1,6 @@
 # Substrate
 测试的图片：
-![image](https://github.com/321llljjjfff123/Substrate/blob/main/substrate-node-template-poe/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87.png)
+![image](https://github.com/321llljjjfff123/Substrate/blob/main/poe/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87.png)
 # Substrate Node Template
 
 A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
