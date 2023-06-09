@@ -9,9 +9,9 @@ mod migrations;
 mod mock; // 基本的测试环境
 
 #[cfg(test)]
-mod tests1; // 测试用例2
+mod tests1; // 本节的测试用例
 // #[cfg(test)]
-// mod tests; // 测试用例
+// mod tests; // 上节的测试用例
 
 
 #[frame_support::pallet]

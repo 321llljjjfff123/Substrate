@@ -1,4 +1,4 @@
-cargo:rustc-env=SUBSTRATE_CLI_IMPL_VERSION=4.0.0-dev-76e2f10be05
+cargo:rustc-env=SUBSTRATE_CLI_IMPL_VERSION=4.0.0-dev-3c7e03b9ba8
 cargo:rerun-if-changed=C:\Users\Heart\Desktop\新建文件夹\Substrate\.git\HEAD
 cargo:rerun-if-changed=C:\Users\Heart\Desktop\新建文件夹\Substrate\.git\refs/heads/main
 
