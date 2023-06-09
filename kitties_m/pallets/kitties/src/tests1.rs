@@ -142,7 +142,7 @@ fn it_works_for_breed_or_evnet() { // 随机数测试
 
 	
 
-		assert_eq!(System::events().len(), 11) // 测试发出的事件数量（KittyCreated：2，KittyBreed： 1）
+		assert_eq!(System::events().len(), 11) // 测试发出的事件数量
 	})
 
 }
@@ -203,7 +203,7 @@ fn it_works_for_transfer_or_evnet() { // transfer测试
 		System::assert_last_event(Event::KittyTransferred { who: recipient, recipient: account_id, kitty_id: kitty_id }.into());
 
 
-		assert_eq!(System::events().len(), 9) // 测试发出的事件数量(KittyTransferred：2, KittyCreated： 1 )
+		assert_eq!(System::events().len(), 9) // 测试发出的事件数量
 		
 	})
 }
@@ -242,7 +242,7 @@ fn it_works_for_sale_or_event() {  // sale测试
 
 		System::assert_last_event(Event::KittyOnSale { who: account_id, kitty_id: kitty_id }.into());
 
-		assert_eq!(System::events().len(), 8);
+		assert_eq!(System::events().len(), 8); // 测试发出的事件数量
 
 	})
 }
@@ -293,6 +293,6 @@ fn it_works_for_bug_or_event() {
 		assert_eq!(KittiesModule::kitty_on_sale(kitty_id).is_some(), false); // 测试购买后，kitty_id在KittyOnSale里的状态是否移除
 
 
-		assert_eq!(System::events().len(), 13);
+		assert_eq!(System::events().len(), 13); // 测试发出的事件数量
 	})
 }

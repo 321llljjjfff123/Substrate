@@ -35,7 +35,7 @@ pub fn migrate<T: Config>() -> Weight { // 查看链上的版本与设置的版�
     
     let new_Kitty = Kitty { 
       dna: kitty.0, // 从第一个数据断言，拷贝到新的dna中
-      name: *b"abcdabcd", // 因为老的数据没有name，新设置数据
+      name: *b"abcdabcd", // 因为老的数据没有name，新设置数据，此处为8bit
     };
 
     Kitties::<T>::insert(index, &new_Kitty);

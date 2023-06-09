@@ -10,7 +10,10 @@ use frame_system::pallet_prelude::*;
 use frame_support::{migration::storage_key_iter, Blake2_128Concat};
 
 #[derive(Encode, Decode, Clone, Copy, RuntimeDebug, PartialEq, Eq, Default, TypeInfo, MaxEncodedLen)]
-pub struct OldKitty(pub [u8; 16]); // 老版本的数据结构(Kitty的数据结构（u8类型16位）)
+pub struct OldKitty{
+  pub dna: [u8; 16],
+  pub name: [u8; 8],
+}; // 老版本的数据结构(Kitty的数据结构（u8类型16位）)
 
 pub fn migrate<T: Config>() -> Weight { // 查看链上的版本与设置的版本是否匹配，不匹配则升级
   // 获取链上的版本
@@ -35,7 +38,7 @@ pub fn migrate<T: Config>() -> Weight { // 查看链上的版本与设置的版�
     
     let new_Kitty = Kitty { 
       dna: kitty.0, // 从第一个数据断言，拷贝到新的dna中
-      name: *b"abcdabcd", // 因为老的数据没有name，新设置数据
+      name: kitty.1, // 复制老数据
     };
 
     Kitties::<T>::insert(index, &new_Kitty);
