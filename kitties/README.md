@@ -1,4 +1,6 @@
 # Substrate Node Template
+kitties测试和运行的图片 
+![image](https://github.com/321llljjjfff123/Substrate/blob/main/kitties/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87.png)
 
 A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
 
