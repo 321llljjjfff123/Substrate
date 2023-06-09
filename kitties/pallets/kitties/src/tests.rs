@@ -23,6 +23,7 @@ fn it_works_for_create_or_evnet() { // 初始化创建测试
 			Error::<Test>::InvalidKittyId
 		);
 
+		// let a = crate::Kitties::kitties(kitty_id).unwrap();
 		let kitty_random = KittiesModule::random_value(&account_id); // 获取随机数
 		let kitty = crate::Kitty(kitty_random); // 创建Kitty类型的数据
 		let _kitty_cs = Kitty_cs_(kitty_random); // 第二种获取Kitty的方法
