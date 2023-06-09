@@ -1,0 +1,13 @@
+prefix=C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\build\libz-sys-d77654ca69f12153\out
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+sharedlibdir=@sharedlibdir@
+includedir=@includedir@
+
+Name: zlib
+Description: zlib compression library
+Version: @VERSION@
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

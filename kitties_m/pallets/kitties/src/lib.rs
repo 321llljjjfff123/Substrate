@@ -109,6 +109,8 @@ pub mod pallet {
 	impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
 		fn on_runtime_upgrade() -> Weight {
 			migrations::v1::migrate::<T>()
+			// migrations::v2_0::migrate::<T>() // 从版本0，升级到版本2
+			// migrations::v2_1::migrate::<T>() // 从本吧1，升级到版本2
 		}
 	}
 
