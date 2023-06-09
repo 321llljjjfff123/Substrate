@@ -1,5 +1,14 @@
 # Substrate Node Template
 
+测试的截图：
+![image](https://github.com/321llljjjfff123/Substrate/blob/main/kitties_m/%E6%B5%8B%E8%AF%95%E6%88%AA%E5%9B%BE.png)
+
+运行的截图：
+![image](https://github.com/321llljjjfff123/Substrate/blob/main/kitties_m/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE.png)
+
+升级以及扩充到8bit的截图：
+![image](https://github.com/321llljjjfff123/Substrate/blob/main/kitties_m/%E5%8D%87%E7%BA%A7%E4%BB%A5%E5%8F%8A%E6%89%A9%E5%85%85%E5%88%B08bit.png)
+
 A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
 
 A standalone version of this template is available for each release of Polkadot in the [Substrate Developer Hub Parachain Template](https://github.com/substrate-developer-hub/substrate-parachain-template/) repository.
