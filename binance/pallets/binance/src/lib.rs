@@ -5,7 +5,6 @@
 /// <https://docs.substrate.io/reference/frame-pallets/>
 pub use pallet::*;
 
-mod binance_price;
 
 
 use sp_core::crypto::KeyTypeId;
@@ -62,7 +61,7 @@ pub mod pallet {
 	// use crate::binance_price::{BinancePrice, BinancePriceResponse};
 
 	use serde::{Deserialize, Deserializer};
-	use core::{convert::TryInto, fmt};
+	use core::fmt;
 	use core::cmp::Eq;
 	#[derive(Deserialize, Encode, Decode, Clone, TypeInfo, PartialEq, Eq)]
 	struct GithubInfo {
@@ -114,6 +113,14 @@ pub mod pallet {
 	#[pallet::pallet]
 	pub struct Pallet<T>(_);
 
+	// The pallet's runtime storage items.
+	// https://docs.substrate.io/main-docs/build/runtime-storage/
+	#[pallet::storage]
+	#[pallet::getter(fn something)]
+	// Learn more about declaring storage items:
+	// https://docs.substrate.io/main-docs/build/runtime-storage/#declaring-storage-items
+	pub type Something<T> = StorageValue<_, u32>;
+
 	/// Configure the pallet by specifying the parameters and types on which it depends.
 	#[pallet::config]
 	// pub trait Config: frame_system::Config +
@@ -132,52 +139,73 @@ pub mod pallet {
 	pub enum Event<T: Config> {
 		/// Event documentation should end with an array that provides descriptive names for event
 		/// parameters. [something, who]
-		ParcelWeightStored { parcel_weight: BoundedVec<u8, ConstU32<4>>, who: T::AccountId },
+		SomethingStored { something: u32, who: T::AccountId },
 	}
+
+
+		// Errors inform users that something went wrong.
+		#[pallet::error]
+		pub enum Error<T> {
+			/// Error names should be descriptive.
+			NoneValue,
+			/// Errors should have helpful documentation associated with them.
+			StorageOverflow,
+		}
 
 	// Dispatchable functions allows users to interact with the pallet and invoke state changes.
 	// These functions materialize as "extrinsics", which are often compared to transactions.
 	// Dispatchable functions must be annotated with a weight and must return a DispatchResult.
 	#[pallet::call]
 	impl<T: Config> Pallet<T> {
+		/// An example dispatchable that takes a singles value as a parameter, writes the value to
+		/// storage and emits an event. This function must be dispatched by a signed extrinsic.
 		#[pallet::call_index(0)]
-		#[pallet::weight(0)]
-		pub fn unsigned_extrinsic_with_signed_payload(
-			origin: OriginFor<T>,
-			payload: Payload<T::Public>,
-			_signature: T::Signature,
-		) -> DispatchResult {
-			ensure_none(origin)?;
+		#[pallet::weight(10_000 + T::DbWeight::get().writes(1).ref_time())]
+		pub fn do_something(origin: OriginFor<T>, something: u32) -> DispatchResult {
+			// Check that the extrinsic was signed and get the signer.
+			// This function will return an error if the extrinsic is not signed.
+			// https://docs.substrate.io/main-docs/build/origins/
+			let who = ensure_signed(origin)?;
 
-			log::info!(
-				"OCW ==> in call unsigned_extrinsic_with_signed_payload: {:?}",
-				payload.binance_price_data
-			);
+			// Update storage.
+			<Something<T>>::put(something);
+
+			// Emit an event.
+			Self::deposit_event(Event::SomethingStored { something, who });
 			// Return a successful DispatchResultWithPostInfo
 			Ok(())
 		}
 
+		/// An example dispatchable that may throw a custom error.
 		#[pallet::call_index(1)]
-		#[pallet::weight(0)]
-		pub fn set_parcel_weight(
-			origin: OriginFor<T>,
-			parcel_weight: BoundedVec<u8, ConstU32<4>>,
-		) -> DispatchResult {
+		#[pallet::weight(10_000 + T::DbWeight::get().reads_writes(1,1).ref_time())]
+		pub fn cause_error(origin: OriginFor<T>) -> DispatchResult {
 			let _who = ensure_signed(origin)?;
 
-			log::info!("EXTRINSIC ==> set_parcel_weight: {:?}", parcel_weight);
-			let data = IndexingData(parcel_weight.clone());
+			// Read a value from storage.
+			match <Something<T>>::get() {
+				// Return an error if the value has not been set.
+				None => return Err(Error::<T>::NoneValue.into()),
+				Some(old) => {
+					// Increment the value read from storage; will error in the event of overflow.
+					let new = old.checked_add(1).ok_or(Error::<T>::StorageOverflow)?;
+					// Update the value in storage with the incremented result.
+					<Something<T>>::put(new);
+					Ok(())
+				},
+			}
+		}
 
-			log::info!("EXTRINSIC ==> set key: {:?}", ONCHAIN_TX_KEY);
-			log::info!(
-				"EXTRINSIC ==> set value: {:?}",
-				sp_std::str::from_utf8(&parcel_weight).unwrap()
-			);
-			sp_io::offchain_index::set(&ONCHAIN_TX_KEY, &data.encode());
+		#[pallet::call_index(2)]
+		#[pallet::weight(0)]
+		pub fn unsigned_extrinsic_with_signed_payload(origin: OriginFor<T>, payload: Payload<T::Public>, _signature: T::Signature,) -> DispatchResult {
+			ensure_none(origin)?;
 
-			Self::deposit_event(Event::ParcelWeightStored { parcel_weight, who: _who });
+            log::info!("OCW ==> in call unsigned_extrinsic_with_signed_payload: {:?}", payload.binance_price_data);
+			// Return a successful DispatchResultWithPostInfo
 			Ok(())
 		}
+
 	}
 
 	// 发送未签名交易时需要实现的 trait
@@ -215,166 +243,82 @@ pub mod pallet {
 
 	#[pallet::hooks]
 	impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
+		/// Offchain worker entry point.
 		fn offchain_worker(block_number: T::BlockNumber) {
-			// let parcel_weight = Self::get_parcel_weight_from_storage();
+			log::info!("OCW ==> Hello World from offchain workers!: {:?}", block_number);
 			if let Ok(info) = Self::fetch_github_info() {
-				log::info!("OCW ==> binance Price Info: {:?}", info);
+          log::info!("OCW ==> Github Info: {:?}", info);
 
-				// Retrieve the signer to sign the payload
-				let signer = Signer::<T, T::AuthorityId>::any_account();
+					
+			// let value: u64 = 42;
+			// // This is your call to on-chain extrinsic together with any necessary parameters.
+			// let call = Call::submit_data_unsigned { key: value };
 
-				// `send_unsigned_transaction` is returning a type of `Option<(Account<T>,
-				// Result<(), ()>)>`. 	 The returned result means:
-				// 	 - `None`: no account is available for sending transaction
-				// 	 - `Some((account, Ok(())))`: transaction is successfully sent
-				// 	 - `Some((account, Err(())))`: error occurred when sending the transaction
+			// // `submit_unsigned_transaction` returns a type of `Result<(), ()>`
+			// //	 ref: https://paritytech.github.io/substrate/master/frame_system/offchain/struct.SubmitTransaction.html
+			// _ = SubmitTransaction::<T, Call<T>>::submit_unsigned_transaction(call.into())
+			// 	.map_err(|_| {
+			// 	log::error!("OCW ==> Failed in offchain_unsigned_tx");
+			// });
+			
+			// let number: u64 = 42;
+			// Retrieve the signer to sign the payload
+			let signer = Signer::<T, T::AuthorityId>::any_account();
 
-				
-				if let Some((_, res)) = signer.send_unsigned_transaction(
-					// this line is to prepare and return payload
-					|acct| Payload {
-						binance_price_data: info.clone(),
-						public: acct.public.clone(),
-					},
-					|payload, signature| Call::unsigned_extrinsic_with_signed_payload {
-						payload,
-						signature,
-					},
-				) {
-					match res {
-						Ok(()) => {
-							log::info!(
-								"OCW ==> unsigned tx with signed payload successfully sent."
-							);
-						},
-						Err(()) => {
-							log::error!("OCW ==> sending unsigned tx with signed payload failed.");
-						},
-					};
-				} else {
-					// The case of `None`: no account is available for sending
-					log::error!("OCW ==> No local account available");
-				}
+			// `send_unsigned_transaction` is returning a type of `Option<(Account<T>, Result<(), ()>)>`.
+			//	 The returned result means:
+			//	 - `None`: no account is available for sending transaction
+			//	 - `Some((account, Ok(())))`: transaction is successfully sent
+			//	 - `Some((account, Err(())))`: error occurred when sending the transaction
+			if let Some((_, res)) = signer.send_unsigned_transaction(
+				// this line is to prepare and return payload
+				|acct| Payload { binance_price_data: info.clone(), public: acct.public.clone() },
+				|payload, signature| Call::unsigned_extrinsic_with_signed_payload { payload, signature },
+			) {
+				match res {
+					Ok(()) => {log::info!("OCW ==> unsigned tx with signed payload successfully sent.");}
+					Err(()) => {log::error!("OCW ==> sending unsigned tx with signed payload failed.");}
+				};
 			} else {
-				log::info!("OCW ==> Error while fetch binance price info!");
+				// The case of `None`: no account is available for sending
+				log::error!("OCW ==> No local account available");
 			}
 
+      } else {
+          log::info!("OCW ==> Error while fetch github info!");
+      }
 			log::info!("OCW ==> Leave from offchain workers!: {:?}", block_number);
 		}
 	}
 
 
+
 	impl<T: Config> Pallet<T> {
 		fn fetch_github_info() -> Result<GithubInfo, http::Error> {
-
-			log::info!("aaaaaaaaaaaa");
-
 				// prepare for send request
-				let deadline = sp_io::offchain::timestamp().add(Duration::from_millis(800_000));
-				log::info!("aaaaaaaaaaaa");
-
+				let deadline = sp_io::offchain::timestamp().add(Duration::from_millis(8_000));
 				let request =
-						http::Request::get("https://data.binance.com/api/v3/avgPrice?symbol=BTCUSDT");
-
-						log::info!("request:{:?}", request);
-
-
+						http::Request::get("https://api.github.com/orgs/substrate-developer-hub");
 				let pending = request
 						.add_header("User-Agent", "Substrate-Offchain-Worker")
 						.deadline(deadline).send().map_err(|_| http::Error::IoError)?;
 				let response = pending.try_wait(deadline).map_err(|_| http::Error::DeadlineReached)??;
-				
-				log::info!("response:{:?}", response);
-				
-				
 				if response.code != 200 {
 						log::warn!("Unexpected status code: {}", response.code);
 						return Err(http::Error::Unknown)
 				}
-
-
 				let body = response.body().collect::<Vec<u8>>();
 				let body_str = sp_std::str::from_utf8(&body).map_err(|_| {
 						log::warn!("No UTF8 body");
 						http::Error::Unknown
 				})?;
 
-				log::info!("body_str:{:?}", body_str);
-
 				// parse the response str
 				let gh_info: GithubInfo =
 						serde_json::from_str(body_str).map_err(|_| http::Error::Unknown)?;
-				log::info!("gh_info:{:?}", gh_info);
-						
 
 				Ok(gh_info)
 		}
 	}
 
-
-	// impl<T: Config> Pallet<T> {
-	// 	/// 获取快递100的价格信息
-	// 	fn fetch_binance_price_info(
-	// 		parcel_weight: BoundedVec<u8, ConstU32<4>>,
-	// 	) -> Result<BoundedVec<BinancePrice, ConstU32<10>>, http::Error> {
-	// 		// prepare for send request
-	// 		let deadline = sp_io::offchain::timestamp().add(Duration::from_millis(8_000));
-	// 		let url = Self::get_url(parcel_weight);
-	// 		let url = sp_std::str::from_utf8(&url).map_err(|_| {
-	// 			log::warn!("No UTF8 body");
-	// 			http::Error::Unknown
-	// 		})?;
-	// 		let request = http::Request::get(url);
-	// 		let pending = request
-	// 			.add_header("User-Agent", "Substrate-Offchain-Worker")
-	// 			.deadline(deadline)
-	// 			.send()
-	// 			.map_err(|_| http::Error::IoError)?;
-	// 		let response =
-	// 			pending.try_wait(deadline).map_err(|_| http::Error::DeadlineReached)??;
-	// 		if response.code != 200 {
-	// 			log::warn!("Unexpected status code: {}", response.code);
-	// 			return Err(http::Error::Unknown)
-	// 		}
-	// 		let body = response.body().collect::<Vec<u8>>();
-	// 		let body_str = sp_std::str::from_utf8(&body).map_err(|_| {
-	// 			log::warn!("No UTF8 body");
-	// 			http::Error::Unknown
-	// 		})?;
-
-	// 		// parse the response str
-	// 		let binance_price_response: BinancePriceResponse =
-	// 			serde_json::from_str(body_str).map_err(|_| http::Error::Unknown)?;
-
-	// 			log::info!("fetch_binance_price_info: {:?}", binance_price_response);
-
-	// 		Ok(binance_price_response.data)
-	// 	}
-
-	// 	/// 获取快递100的价格信息的url
-	// 	fn get_url(parcel_weight: BoundedVec<u8, ConstU32<4>>) -> Vec<u8> {
-	// 		let mut result = Vec::from(
-	// 			"https://data.binance.com/api/v3/avgPrice?symbol=BTCUSDT"
-	// 				.as_bytes(),
-	// 		);
-	// 		log::info!("get_url: {:?}", result);
-	// 		result.extend_from_slice(parcel_weight.as_slice());
-	// 		result
-	// 	}
-
-	// 	/// 从链下存储中获取快递重量
-	// 	fn get_parcel_weight_from_storage() -> BoundedVec<u8, ConstU32<4>> {
-	// 		let mut result = BoundedVec::<u8, ConstU32<4>>::try_from(b"1".to_vec()).unwrap();
-	// 		if let Some(parcel_weight) =
-	// 			sp_runtime::offchain::storage::StorageValueRef::persistent(ONCHAIN_TX_KEY)
-	// 				.get::<IndexingData>()
-	// 				.unwrap_or_else(|_| {
-	// 					log::info!("OCW ==> Error while fetching data from offchain storage!");
-	// 					None
-	// 				}) {
-	// 			result = parcel_weight.0;
-	// 		}
-	// 		result
-	// 	}
-	// }
 }

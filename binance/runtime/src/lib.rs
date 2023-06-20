@@ -41,7 +41,7 @@ pub use frame_support::{
 };
 pub use frame_system::Call as SystemCall;
 pub use pallet_balances::Call as BalancesCall;
-use pallet_insecure_randomness_collective_flip;
+// use pallet_insecure_randomness_collective_flip;
 pub use pallet_timestamp::Call as TimestampCall;
 use pallet_transaction_payment::{ConstFeeMultiplier, CurrencyAdapter, Multiplier};
 #[cfg(any(feature = "std", test))]
@@ -362,8 +362,8 @@ construct_runtime!(
 		// Include the custom logic from the pallet-template in the runtime.
 		TemplateModule: pallet_template,
 		// Include the custom logic from the pallet-poe in the runtime.
-		PoeModule: pallet_poe,
-		binanceModule: pallet_binance,
+		// PoeModule: pallet_poe,
+		BinanceModule: pallet_binance,
 	}
 );
 

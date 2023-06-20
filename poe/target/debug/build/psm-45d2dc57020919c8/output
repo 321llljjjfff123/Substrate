@@ -22,7 +22,7 @@ CRATE_CC_NO_DEFAULTS = None
 CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
 DEBUG = Some("true")
 cargo:rustc-cfg=asm
-running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Zi" "-FoC:\\Users\\Heart\\Desktop\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\src/arch/x86_64_msvc.o" "-c" "src/arch/x86_64_msvc.asm"
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\ml64.exe" "-nologo" "-Zi" "-FoD:\\rust\\substrate\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\src/arch/x86_64_msvc.o" "-c" "src/arch/x86_64_msvc.asm"
  Assembling: src/arch/x86_64_msvc.asm
 exit code: 0
 cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
@@ -41,8 +41,8 @@ cargo:rerun-if-env-changed=HOST_ARFLAGS
 HOST_ARFLAGS = None
 cargo:rerun-if-env-changed=ARFLAGS
 ARFLAGS = None
-running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\lib.exe" "-out:C:\\Users\\Heart\\Desktop\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\libpsm_s.a" "-nologo" "C:\\Users\\Heart\\Desktop\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\src/arch/x86_64_msvc.o"
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\lib.exe" "-out:D:\\rust\\substrate\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\libpsm_s.a" "-nologo" "D:\\rust\\substrate\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\psm-45d2dc57020919c8\\out\\src/arch/x86_64_msvc.o"
 exit code: 0
 cargo:rustc-link-search=native=D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\atlmfc\lib\x64
 cargo:rustc-link-lib=static=psm_s
-cargo:rustc-link-search=native=C:\Users\Heart\Desktop\新建文件夹\Substrate\poe\target\debug\build\psm-45d2dc57020919c8\out
+cargo:rustc-link-search=native=D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\psm-45d2dc57020919c8\out
