@@ -201,7 +201,7 @@ pub mod pallet {
 		pub fn unsigned_extrinsic_with_signed_payload(origin: OriginFor<T>, payload: Payload<T::Public>, _signature: T::Signature,) -> DispatchResult {
 			ensure_none(origin)?;
 
-            log::info!("OCW ==> in call unsigned_extrinsic_with_signed_payload: {:?}", payload.binance_price_data);
+      log::info!("OCW ==> in call unsigned_extrinsic_with_signed_payload: {:?}", payload.binance_price_data);
 			// Return a successful DispatchResultWithPostInfo
 			Ok(())
 		}
