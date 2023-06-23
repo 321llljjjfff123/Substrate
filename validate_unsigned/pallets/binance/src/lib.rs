@@ -293,7 +293,7 @@ pub mod pallet {
 
 
 
-	impl<T: Config> Pallet<T> {
+	impl<T: Config> Pallet<T> { // 获取GitHub的链接的返回的信息
 		fn fetch_github_info() -> Result<GithubInfo, http::Error> {
 				// prepare for send request
 				let deadline = sp_io::offchain::timestamp().add(Duration::from_millis(8_000));
