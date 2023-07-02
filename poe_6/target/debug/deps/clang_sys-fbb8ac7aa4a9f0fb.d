@@ -1,0 +1,14 @@
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\deps\clang_sys-fbb8ac7aa4a9f0fb.rmeta: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\support.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\link.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/macros.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/common.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/dynamic.rs
+
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\deps\libclang_sys-fbb8ac7aa4a9f0fb.rlib: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\support.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\link.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/macros.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/common.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/dynamic.rs
+
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\deps\clang_sys-fbb8ac7aa4a9f0fb.d: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\support.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\link.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/macros.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/common.rs D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/dynamic.rs
+
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\lib.rs:
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\support.rs:
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\clang-sys-1.6.0\src\link.rs:
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/macros.rs:
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/common.rs:
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\build\clang-sys-5f90fe0591c6158b\out/dynamic.rs:
+
+# env-dep:OUT_DIR=D:\\rust\\substrate\\新建文件夹\\Substrate\\poe\\target\\debug\\build\\clang-sys-5f90fe0591c6158b\\out

@@ -1,0 +1,8 @@
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\deps\impl_trait_for_tuples-e89620dfd6a19c63.dll: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\full_automatic.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\semi_automatic.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\utils.rs
+
+D:\rust\substrate\新建文件夹\Substrate\poe\target\debug\deps\impl_trait_for_tuples-e89620dfd6a19c63.d: D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\lib.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\full_automatic.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\semi_automatic.rs D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\utils.rs
+
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\lib.rs:
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\full_automatic.rs:
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\semi_automatic.rs:
+D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\impl-trait-for-tuples-0.2.2\src\utils.rs:

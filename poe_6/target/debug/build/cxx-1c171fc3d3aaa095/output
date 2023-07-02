@@ -1,0 +1,82 @@
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-pc-windows-msvc")
+cargo:rerun-if-env-changed=CXX_x86_64-pc-windows-msvc
+CXX_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CXX_x86_64_pc_windows_msvc
+CXX_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CXX
+HOST_CXX = None
+cargo:rerun-if-env-changed=CXX
+CXX = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64-pc-windows-msvc
+CXXFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64_pc_windows_msvc
+CXXFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CXXFLAGS
+HOST_CXXFLAGS = None
+cargo:rerun-if-env-changed=CXXFLAGS
+CXXFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+DEBUG = Some("true")
+cargo:rerun-if-env-changed=CXX_x86_64-pc-windows-msvc
+CXX_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CXX_x86_64_pc_windows_msvc
+CXX_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CXX
+HOST_CXX = None
+cargo:rerun-if-env-changed=CXX
+CXX = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64-pc-windows-msvc
+CXXFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64_pc_windows_msvc
+CXXFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_CXXFLAGS
+HOST_CXXFLAGS = None
+cargo:rerun-if-env-changed=CXXFLAGS
+CXXFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,llvm14-builtins-abi,sse,sse2")
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-Z7" "-Brepro" "-W4" "-FoD:\\rust\\substrate\\鏂板缓鏂囦欢澶筡\Substrate\\poe\\target\\debug\\build\\cxx-1c171fc3d3aaa095\\out\\src/cxx.o" "-c" "src/cxx.cc"
+cxx.cc
+D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\include\ostream(544): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\include\ostream(536): note: 在编译 类 模板 成员函数“std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::write(const _Elem *,std::streamsize)”时
+        with
+        [
+            _Elem=char
+        ]
+src/cxx.cc(288): note: 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::write(const _Elem *,std::streamsize)”的引用
+        with
+        [
+            _Elem=char
+        ]
+D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\include\ostream(671): note: 查看对正在编译的 类 模板 实例化“std::basic_ostream<char,std::char_traits<char>>”的引用
+exit code: 0
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-msvc
+AR_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_msvc
+AR_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-msvc
+ARFLAGS_x86_64-pc-windows-msvc = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_msvc
+ARFLAGS_x86_64_pc_windows_msvc = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: "D:\\Software\\Microsoft VS Code\\Microsoft Visual Studio\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\lib.exe" "-out:D:\\rust\\substrate\\鏂板缓鏂囦欢澶筡\Substrate\\poe\\target\\debug\\build\\cxx-1c171fc3d3aaa095\\out\\libcxxbridge1.a" "-nologo" "D:\\rust\\substrate\\鏂板缓鏂囦欢澶筡\Substrate\\poe\\target\\debug\\build\\cxx-1c171fc3d3aaa095\\out\\src/cxx.o"
+exit code: 0
+cargo:rustc-link-search=native=D:\Software\Microsoft VS Code\Microsoft Visual Studio\VC\Tools\MSVC\14.34.31933\atlmfc\lib\x64
+cargo:rustc-link-lib=static=cxxbridge1
+cargo:rustc-link-search=native=D:\rust\substrate\鏂板缓鏂囦欢澶筡Substrate\poe\target\debug\build\cxx-1c171fc3d3aaa095\out
+cargo:rerun-if-changed=src/cxx.cc
+cargo:rerun-if-changed=include/cxx.h
+cargo:rustc-cfg=built_with_cargo
+cargo:HEADER=D:\rust\rust\.cargo\registry\src\mirrors.tuna.tsinghua.edu.cn-df7c3c540f42cdbd\cxx-1.0.93\include\cxx.h
