@@ -1,8 +1,5 @@
 # Substrate Node Template
 poe测试的图片：
-![image](https://github.com/321llljjjfff123/Substrate/blob/main/poe/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87.png)
-
-A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
 
 A standalone version of this template is available for each release of Polkadot in the [Substrate Developer Hub Parachain Template](https://github.com/substrate-developer-hub/substrate-parachain-template/) repository.
 The parachain template is generated directly at each Polkadot release branch from the [Node Template in Substrate](https://github.com/paritytech/substrate/tree/master/bin/node-template) upstream
